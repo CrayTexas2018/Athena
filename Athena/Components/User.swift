@@ -77,7 +77,10 @@ public struct User
     
     public static func age(dob: Date) -> Int
     {
-        return Calendar.current.dateComponents([.day], from: dob).year!
+        let birthYear = Calendar.current.dateComponents([.year], from: dob).year!
+        let currentYear = Calendar.current.dateComponents([.year], from: Date()).year!
+        
+        return currentYear - birthYear
     }
 }
 
