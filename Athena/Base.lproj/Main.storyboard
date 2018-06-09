@@ -81,6 +81,96 @@
             </objects>
             <point key="canvasLocation" x="-1162" y="260"/>
         </scene>
+        <!--Messages-->
+        <scene sceneID="MZk-0Q-cTF">
+            <objects>
+                <tableViewController storyboardIdentifier="Messages" title="Messages" id="ROh-Nn-Y8x" customClass="MainMessageViewController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="55b-kx-n7q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mr7-xl-AI2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mr7-xl-AI2" id="Vqe-ij-xRf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MessageCellMain" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCellMain" rowHeight="100" id="VWy-6u-Jti" customClass="MainMessageCellTableViewCell" customModule="Athena" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWy-6u-Jti" id="X16-Tf-f3q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tq2-zg-xuB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekr-u2-TCm" customClass="StandardLabel" customModule="Athena" customModuleProvider="target">
+                                                    <rect key="frame" x="261" y="0.0" width="106" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYr-JN-ZHp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Xf0-1r-Qjk"/>
+                                                        <constraint firstAttribute="height" constant="100" id="mR1-sw-GBW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Message Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-58-OxK" customClass="StandardLabel" customModule="Athena" customModuleProvider="target">
+                                                    <rect key="frame" x="108" y="28" width="154.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-yR-DHm" customClass="StandardLabel" customModule="Athena" customModuleProvider="target">
+                                                    <rect key="frame" x="108" y="0.0" width="86.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="2xB-yR-DHm" firstAttribute="leading" secondItem="pYr-JN-ZHp" secondAttribute="trailing" constant="8" id="7Tj-em-No4"/>
+                                                <constraint firstItem="2xB-yR-DHm" firstAttribute="top" secondItem="tq2-zg-xuB" secondAttribute="top" id="8eU-aP-4h2"/>
+                                                <constraint firstAttribute="bottom" secondItem="pYr-JN-ZHp" secondAttribute="bottom" id="AhT-Xa-RnV"/>
+                                                <constraint firstItem="vZx-58-OxK" firstAttribute="top" secondItem="tq2-zg-xuB" secondAttribute="top" constant="28" id="Ki1-Ib-xvx"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ekr-u2-TCm" secondAttribute="trailing" constant="8" id="TMO-GU-IO3"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ekr-u2-TCm" secondAttribute="bottom" constant="78.5" id="UDi-Fh-zhX"/>
+                                                <constraint firstItem="vZx-58-OxK" firstAttribute="leading" secondItem="pYr-JN-ZHp" secondAttribute="trailing" constant="8" id="Y5m-3L-JLT"/>
+                                                <constraint firstItem="pYr-JN-ZHp" firstAttribute="top" secondItem="tq2-zg-xuB" secondAttribute="top" id="m0r-hY-ABb"/>
+                                                <constraint firstItem="pYr-JN-ZHp" firstAttribute="leading" secondItem="tq2-zg-xuB" secondAttribute="leading" id="sks-hV-LTs"/>
+                                                <constraint firstItem="Ekr-u2-TCm" firstAttribute="top" secondItem="tq2-zg-xuB" secondAttribute="top" id="xTa-f6-6T4"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellView" destination="tq2-zg-xuB" id="lDg-uM-mhp"/>
+                                    <outlet property="contactImage" destination="pYr-JN-ZHp" id="6s8-YF-Fa4"/>
+                                    <outlet property="contactNameLabel" destination="2xB-yR-DHm" id="0VU-Yd-mrK"/>
+                                    <outlet property="lastMessageLabel" destination="Ekr-u2-TCm" id="kd3-dA-1WN"/>
+                                    <outlet property="messageLabel" destination="vZx-58-OxK" id="1Ve-zj-0B2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ROh-Nn-Y8x" id="wQI-sG-hit"/>
+                            <outlet property="delegate" destination="ROh-Nn-Y8x" id="DAV-Xs-edf"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Messages" id="iwh-Rc-dA3"/>
+                    <navigationItem key="navigationItem" id="djm-bL-iM2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNp-EB-Wfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="1434"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="vvi-6d-MGq">
             <objects>
@@ -97,17 +187,17 @@
             </objects>
             <point key="canvasLocation" x="521" y="593"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="orb-up-5yb">
             <objects>
-                <viewController id="qo3-5Z-c4q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Feed" title="Feed" id="qo3-5Z-c4q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhD-jm-ifR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Jm0-3H-U1L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="YaI-fx-zgZ"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="YaI-fx-zgZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXf-9e-z4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,6 +215,7 @@
                     <connections>
                         <segue destination="qo3-5Z-c4q" kind="relationship" relationship="viewControllers" id="31g-Q7-NZc"/>
                         <segue destination="PbK-mA-MVd" kind="relationship" relationship="viewControllers" id="IAP-Wi-x9q"/>
+                        <segue destination="ROh-Nn-Y8x" kind="relationship" relationship="viewControllers" id="awJ-4i-cZd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SJ-ui-Dbk" userLabel="First Responder" sceneMemberID="firstResponder"/>

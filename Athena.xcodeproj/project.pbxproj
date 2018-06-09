@@ -21,6 +21,8 @@
 		ABD7327420CBA18600D408F8 /* LoginUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327320CBA18600D408F8 /* LoginUtility.swift */; };
 		ABD7327620CBB0F800D408F8 /* StandardAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327520CBB0F800D408F8 /* StandardAlert.swift */; };
 		ABD7327920CBB27F00D408F8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327820CBB27F00D408F8 /* FeedViewController.swift */; };
+		ABD7327D20CBBD9700D408F8 /* MainMessageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327C20CBBD9700D408F8 /* MainMessageCellTableViewCell.swift */; };
+		ABD7327F20CBC2BB00D408F8 /* MainMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327E20CBC2BB00D408F8 /* MainMessageViewController.swift */; };
 		ABF9FD3820CB33A20052E909 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9FD3720CB33A20052E909 /* Message.swift */; };
 		ABF9FD3C20CB47BE0052E909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF9FD3B20CB47BD0052E909 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		ABD7327320CBA18600D408F8 /* LoginUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtility.swift; sourceTree = "<group>"; };
 		ABD7327520CBB0F800D408F8 /* StandardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAlert.swift; sourceTree = "<group>"; };
 		ABD7327820CBB27F00D408F8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		ABD7327C20CBBD9700D408F8 /* MainMessageCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessageCellTableViewCell.swift; sourceTree = "<group>"; };
+		ABD7327E20CBC2BB00D408F8 /* MainMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessageViewController.swift; sourceTree = "<group>"; };
 		ABF9FD3720CB33A20052E909 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ABF9FD3B20CB47BD0052E909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C285FE2D15CE158FE80AB59A /* Pods-Athena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Athena/Pods-Athena.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,10 +165,28 @@
 		ABD7327720CBB22F00D408F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABD7327A20CBBD6300D408F8 /* Messages */,
 				AB72769B20CA7217006CC069 /* LoginController.swift */,
 				ABD7327820CBB27F00D408F8 /* FeedViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABD7327A20CBBD6300D408F8 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7327B20CBBD7B00D408F8 /* Main */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		ABD7327B20CBBD7B00D408F8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7327C20CBBD9700D408F8 /* MainMessageCellTableViewCell.swift */,
+				ABD7327E20CBC2BB00D408F8 /* MainMessageViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		E8A89C0BA4BA52C257E0B9E3 /* Pods */ = {
@@ -301,6 +323,7 @@
 			files = (
 				ABBA5EDA20CA7673001C4B0D /* User.swift in Sources */,
 				ABD7327620CBB0F800D408F8 /* StandardAlert.swift in Sources */,
+				ABD7327D20CBBD9700D408F8 /* MainMessageCellTableViewCell.swift in Sources */,
 				ABD7327420CBA18600D408F8 /* LoginUtility.swift in Sources */,
 				ABBA5EDE20CA7F67001C4B0D /* RoundedButton.swift in Sources */,
 				AB72769C20CA7217006CC069 /* LoginController.swift in Sources */,
@@ -310,6 +333,7 @@
 				ABBA5ED820CA741B001C4B0D /* Colors.swift in Sources */,
 				ABF9FD3820CB33A20052E909 /* Message.swift in Sources */,
 				ABD7327020CB9CC300D408F8 /* StandardLabel.swift in Sources */,
+				ABD7327F20CBC2BB00D408F8 /* MainMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
