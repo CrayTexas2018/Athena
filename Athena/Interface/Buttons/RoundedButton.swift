@@ -10,12 +10,13 @@ import UIKit
 
 class RoundedButton: UIButton {
     let btnColor = Colors.athenaPrimary
-    let btnFontColor = Colors.athenaSuccess
+    let btnFontColor = Colors.athenaWhite
     let btnFont = Fonts.athenaPrimary(size:20)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.layer.cornerRadius = self.frame.height / 2
+//        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.cornerRadius = 10
         self.setTitleColor(btnFontColor, for: .normal)
         self.titleLabel?.font = btnFont
         self.backgroundColor = btnColor

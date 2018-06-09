@@ -7,4 +7,5 @@ target 'Athena' do
 
   # Pods for Athena
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end

@@ -35,6 +35,7 @@
 		ABBA5ED920CA7673001C4B0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABBA5EDD20CA7F67001C4B0D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ABBA5EE020CA804A001C4B0D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		ABD1740720CB4A66001E30D1 /* Athena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Athena.entitlements; sourceTree = "<group>"; };
 		ABF9FD3720CB33A20052E909 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ABF9FD3B20CB47BD0052E909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C285FE2D15CE158FE80AB59A /* Pods-Athena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Athena/Pods-Athena.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		AB72769820CA7217006CC069 /* Athena */ = {
 			isa = PBXGroup;
 			children = (
+				ABD1740720CB4A66001E30D1 /* Athena.entitlements */,
 				ABBA5ED620CA73FF001C4B0D /* Interface */,
 				ABBA5ED520CA73F0001C4B0D /* Utilities */,
 				ABBA5ED420CA73E8001C4B0D /* Components */,
@@ -173,6 +175,11 @@
 					AB72769520CA7217006CC069 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -217,11 +224,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Athena/Pods-Athena-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +407,7 @@
 			baseConfigurationReference = C285FE2D15CE158FE80AB59A /* Pods-Athena.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Athena/Athena.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU64FWTC7W;
 				INFOPLIST_FILE = Athena/Info.plist;
@@ -414,6 +424,7 @@
 			baseConfigurationReference = 1C9613E79C904EC320D06DBA /* Pods-Athena.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Athena/Athena.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU64FWTC7W;
 				INFOPLIST_FILE = Athena/Info.plist;
