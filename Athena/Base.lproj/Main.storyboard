@@ -10,25 +10,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHd-xY-i9m" customClass="RoundedButton" customModule="Athena" customModuleProvider="target">
-                                <rect key="frame" x="16" y="342" width="343" height="40"/>
+                                <rect key="frame" x="16" y="346" width="343" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ym-Rq-ZE5"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y8z-dG-0iC">
-                                <rect key="frame" x="226" y="255" width="49" height="31"/>
+                                <rect key="frame" x="226" y="259" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7G-vF-aoM">
-                                <rect key="frame" x="101" y="260" width="117" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7G-vF-aoM" customClass="StandardLabel" customModule="Athena" customModuleProvider="target">
+                                <rect key="frame" x="16" y="264" width="202" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -42,7 +45,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afw-4V-uxL">
-                                <rect key="frame" x="16" y="217" width="343" height="30"/>
+                                <rect key="frame" x="16" y="221" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -53,18 +56,80 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-hY-Cnm" customClass="RoundedButton" customModule="Athena" customModuleProvider="target">
-                                <rect key="frame" x="16" y="294" width="343" height="40"/>
+                                <rect key="frame" x="16" y="298" width="343" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYs-Tx-Ymi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="createAccountButton" destination="sHd-xY-i9m" id="Olh-tQ-UpT"/>
+                        <outlet property="loginButton" destination="kvd-hY-Cnm" id="W6F-Cs-Jv5"/>
+                        <outlet property="logoImageView" destination="hxV-Ul-oz4" id="9yL-iG-x3a"/>
+                        <outlet property="passwordTextField" destination="Afw-4V-uxL" id="bLR-Wk-tXg"/>
+                        <outlet property="rememberMeLabel" destination="g7G-vF-aoM" id="cYK-HB-L2G"/>
+                        <outlet property="rememberMeSwitch" destination="Y8z-dG-0iC" id="pQA-3V-FUf"/>
+                        <outlet property="usernameTextField" destination="j9A-qg-w7K" id="RL8-b7-H3v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-1162" y="260"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="vvi-6d-MGq">
+            <objects>
+                <viewController id="PbK-mA-MVd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GSb-gY-3IO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KIo-RG-kC8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="HDZ-EX-mUa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ad-Rp-DH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="593"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="orb-up-5yb">
+            <objects>
+                <viewController id="qo3-5Z-c4q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhD-jm-ifR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Jm0-3H-U1L"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="YaI-fx-zgZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXf-9e-z4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="-71"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="mKO-Ih-LmC">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabView" id="Kr9-k8-hfg" customClass="FeedViewController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y1G-tv-B9K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qo3-5Z-c4q" kind="relationship" relationship="viewControllers" id="31g-Q7-NZc"/>
+                        <segue destination="PbK-mA-MVd" kind="relationship" relationship="viewControllers" id="IAP-Wi-x9q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9SJ-ui-Dbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334" y="260"/>
         </scene>
     </scenes>
 </document>

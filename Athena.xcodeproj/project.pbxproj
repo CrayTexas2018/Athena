@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		52FABD9A341A7A4FC0E0FF62 /* Pods_Athena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E7D9B2DC42829E16712F61 /* Pods_Athena.framework */; };
 		AB72769A20CA7217006CC069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72769920CA7217006CC069 /* AppDelegate.swift */; };
-		AB72769C20CA7217006CC069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72769B20CA7217006CC069 /* ViewController.swift */; };
+		AB72769C20CA7217006CC069 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72769B20CA7217006CC069 /* LoginController.swift */; };
 		AB72769F20CA7217006CC069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB72769D20CA7217006CC069 /* Main.storyboard */; };
 		AB7276A120CA7217006CC069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7276A020CA7217006CC069 /* Assets.xcassets */; };
 		AB7276A420CA7217006CC069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7276A220CA7217006CC069 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,10 @@
 		ABBA5EDA20CA7673001C4B0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5ED920CA7673001C4B0D /* User.swift */; };
 		ABBA5EDE20CA7F67001C4B0D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5EDD20CA7F67001C4B0D /* RoundedButton.swift */; };
 		ABBA5EE120CA804A001C4B0D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5EE020CA804A001C4B0D /* Fonts.swift */; };
+		ABD7327020CB9CC300D408F8 /* StandardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7326F20CB9CC300D408F8 /* StandardLabel.swift */; };
+		ABD7327420CBA18600D408F8 /* LoginUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327320CBA18600D408F8 /* LoginUtility.swift */; };
+		ABD7327620CBB0F800D408F8 /* StandardAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327520CBB0F800D408F8 /* StandardAlert.swift */; };
+		ABD7327920CBB27F00D408F8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7327820CBB27F00D408F8 /* FeedViewController.swift */; };
 		ABF9FD3820CB33A20052E909 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9FD3720CB33A20052E909 /* Message.swift */; };
 		ABF9FD3C20CB47BE0052E909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABF9FD3B20CB47BD0052E909 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -26,7 +30,7 @@
 		83E7D9B2DC42829E16712F61 /* Pods_Athena.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Athena.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB72769620CA7217006CC069 /* Athena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Athena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB72769920CA7217006CC069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB72769B20CA7217006CC069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB72769B20CA7217006CC069 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AB72769E20CA7217006CC069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB7276A020CA7217006CC069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7276A320CA7217006CC069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		ABBA5EDD20CA7F67001C4B0D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ABBA5EE020CA804A001C4B0D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		ABD1740720CB4A66001E30D1 /* Athena.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Athena.entitlements; sourceTree = "<group>"; };
+		ABD7326F20CB9CC300D408F8 /* StandardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLabel.swift; sourceTree = "<group>"; };
+		ABD7327320CBA18600D408F8 /* LoginUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtility.swift; sourceTree = "<group>"; };
+		ABD7327520CBB0F800D408F8 /* StandardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAlert.swift; sourceTree = "<group>"; };
+		ABD7327820CBB27F00D408F8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		ABF9FD3720CB33A20052E909 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		ABF9FD3B20CB47BD0052E909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C285FE2D15CE158FE80AB59A /* Pods-Athena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Athena.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Athena/Pods-Athena.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,11 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				ABD1740720CB4A66001E30D1 /* Athena.entitlements */,
+				ABD7327720CBB22F00D408F8 /* Controllers */,
 				ABBA5ED620CA73FF001C4B0D /* Interface */,
 				ABBA5ED520CA73F0001C4B0D /* Utilities */,
 				ABBA5ED420CA73E8001C4B0D /* Components */,
 				AB72769920CA7217006CC069 /* AppDelegate.swift */,
-				AB72769B20CA7217006CC069 /* ViewController.swift */,
 				AB72769D20CA7217006CC069 /* Main.storyboard */,
 				AB7276A020CA7217006CC069 /* Assets.xcassets */,
 				AB7276A220CA7217006CC069 /* LaunchScreen.storyboard */,
@@ -109,6 +117,7 @@
 		ABBA5ED520CA73F0001C4B0D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				ABD7327220CBA17800D408F8 /* Account */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -116,9 +125,11 @@
 		ABBA5ED620CA73FF001C4B0D /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				ABD7327120CB9D5C00D408F8 /* Labels */,
 				ABBA5EDF20CA7F6B001C4B0D /* Buttons */,
 				ABBA5ED720CA741B001C4B0D /* Colors.swift */,
 				ABBA5EE020CA804A001C4B0D /* Fonts.swift */,
+				ABD7327520CBB0F800D408F8 /* StandardAlert.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -129,6 +140,31 @@
 				ABBA5EDD20CA7F67001C4B0D /* RoundedButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		ABD7327120CB9D5C00D408F8 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7326F20CB9CC300D408F8 /* StandardLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		ABD7327220CBA17800D408F8 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7327320CBA18600D408F8 /* LoginUtility.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		ABD7327720CBB22F00D408F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB72769B20CA7217006CC069 /* LoginController.swift */,
+				ABD7327820CBB27F00D408F8 /* FeedViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E8A89C0BA4BA52C257E0B9E3 /* Pods */ = {
@@ -264,12 +300,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABBA5EDA20CA7673001C4B0D /* User.swift in Sources */,
+				ABD7327620CBB0F800D408F8 /* StandardAlert.swift in Sources */,
+				ABD7327420CBA18600D408F8 /* LoginUtility.swift in Sources */,
 				ABBA5EDE20CA7F67001C4B0D /* RoundedButton.swift in Sources */,
-				AB72769C20CA7217006CC069 /* ViewController.swift in Sources */,
+				AB72769C20CA7217006CC069 /* LoginController.swift in Sources */,
 				AB72769A20CA7217006CC069 /* AppDelegate.swift in Sources */,
 				ABBA5EE120CA804A001C4B0D /* Fonts.swift in Sources */,
+				ABD7327920CBB27F00D408F8 /* FeedViewController.swift in Sources */,
 				ABBA5ED820CA741B001C4B0D /* Colors.swift in Sources */,
 				ABF9FD3820CB33A20052E909 /* Message.swift in Sources */,
+				ABD7327020CB9CC300D408F8 /* StandardLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
