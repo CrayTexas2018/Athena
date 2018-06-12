@@ -7,14 +7,26 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
 
 public struct LoginUtility {
     
-    public static func login(username: String, password: String) -> Bool {
-        // See if username/password combo exists
+    public static func login(email: String, password: String) -> Bool {
+        var status = false
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                status = false
+            }
+            if user != nil {
+                status = true
+            }
+        }
+        return status
+    }
+    
+    public func loginCallback(user: User, error: Error)
+    {
         
-        // See if email/password combo exists
-        
-        return true
     }
 }

@@ -25,6 +25,7 @@ public struct User
     let lastName: String
     let gender: Gender
     let dob: Date
+    let member: [Group]
     let created: Date
     let upated: Date
     
@@ -63,6 +64,11 @@ public struct User
     public static func dob(user: User) -> Date
     {
         return user.dob
+    }
+    
+    public static func member(user: User) -> [Group]
+    {
+        return user.member
     }
     
     public static func created(user: User) -> Date

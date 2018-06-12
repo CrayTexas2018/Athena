@@ -13,6 +13,8 @@
 		AB72769F20CA7217006CC069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB72769D20CA7217006CC069 /* Main.storyboard */; };
 		AB7276A120CA7217006CC069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7276A020CA7217006CC069 /* Assets.xcassets */; };
 		AB7276A420CA7217006CC069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7276A220CA7217006CC069 /* LaunchScreen.storyboard */; };
+		AB8A5E1B20CFA3E6009DABE6 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A5E1A20CFA3E6009DABE6 /* Group.swift */; };
+		AB8A5E1D20CFB27A009DABE6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A5E1C20CFB27A009DABE6 /* Post.swift */; };
 		ABBA5ED820CA741B001C4B0D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5ED720CA741B001C4B0D /* Colors.swift */; };
 		ABBA5EDA20CA7673001C4B0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5ED920CA7673001C4B0D /* User.swift */; };
 		ABBA5EDE20CA7F67001C4B0D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5EDD20CA7F67001C4B0D /* RoundedButton.swift */; };
@@ -37,6 +39,8 @@
 		AB7276A020CA7217006CC069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7276A320CA7217006CC069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB7276A520CA7217006CC069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB8A5E1A20CFA3E6009DABE6 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AB8A5E1C20CFB27A009DABE6 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ABBA5ED720CA741B001C4B0D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		ABBA5ED920CA7673001C4B0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABBA5EDD20CA7F67001C4B0D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			children = (
 				ABBA5ED920CA7673001C4B0D /* User.swift */,
 				ABF9FD3720CB33A20052E909 /* Message.swift */,
+				AB8A5E1A20CFA3E6009DABE6 /* Group.swift */,
+				AB8A5E1C20CFB27A009DABE6 /* Post.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -281,12 +287,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Athena/Pods-Athena-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -328,7 +336,9 @@
 				ABBA5EDE20CA7F67001C4B0D /* RoundedButton.swift in Sources */,
 				AB72769C20CA7217006CC069 /* LoginController.swift in Sources */,
 				AB72769A20CA7217006CC069 /* AppDelegate.swift in Sources */,
+				AB8A5E1B20CFA3E6009DABE6 /* Group.swift in Sources */,
 				ABBA5EE120CA804A001C4B0D /* Fonts.swift in Sources */,
+				AB8A5E1D20CFB27A009DABE6 /* Post.swift in Sources */,
 				ABD7327920CBB27F00D408F8 /* FeedViewController.swift in Sources */,
 				ABBA5ED820CA741B001C4B0D /* Colors.swift in Sources */,
 				ABF9FD3820CB33A20052E909 /* Message.swift in Sources */,

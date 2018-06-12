@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class LoginController: UIViewController {
     
@@ -23,24 +24,28 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = Colors.athenaBlack
-        createTestUser()
+        //createTestUser()
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        guard let username = usernameTextField.text else {
+        guard let email = usernameTextField.text else {
             return
         }
         guard let password = passwordTextField.text else {
             return
         }
         
-        if (LoginUtility.login(username: username, password: password)) {
-            if let tabViewController = storyboard?.instantiateViewController(withIdentifier: "MainTabView") as? FeedViewController {
-                present(tabViewController, animated: true, completion: nil)
+        // Firebase login
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                let alert = StandardAlert.alert(alertTitle: "Login Error", alertMessage: "Account not found", buttonTitle: "OK")
+                self.present(alert, animated: true, completion: nil)
             }
-        } else {
-            let alert = StandardAlert.alert(alertTitle: "Login Error", alertMessage: "Account not found", buttonTitle: "OK")
-            self.present(alert, animated: true, completion: nil)
+            if user != nil {
+                if let tabViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabView") as? FeedViewController {
+                    self.present(tabViewController, animated: true, completion: nil)
+                }
+            }
         }
     }
     
@@ -48,19 +53,19 @@ class LoginController: UIViewController {
         
     }
     
-    func createTestUser()
-    {
-        let isoDate = "2016-04-14T10:44:00+0000"
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
-        let date = dateFormatter.date(from: isoDate)!
-        
-        let user = User(userId: 1, guid: "asdf", email: "asdf@asdf.com", username: "asdf", firstName: "asdf", lastName: "ghjk", gender: User.Gender.male, dob: date, created: Date(), upated: Date())
-        
-        print(User.age(dob: user.dob))
-    }
+//    func createTestUser()
+//    {
+//        let isoDate = "2016-04-14T10:44:00+0000"
+//        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+//        let date = dateFormatter.date(from: isoDate)!
+//        
+//        let user = User(userId: 1, guid: "asdf", email: "asdf@asdf.com", username: "asdf", firstName: "asdf", lastName: "ghjk", gender: User.Gender.male, dob: date, created: Date(), upated: Date(), gr)
+//        
+//        print(User.age(dob: user.dob))
+//    }
 
 
 }
