@@ -26,6 +26,7 @@ public struct User
     let gender: Gender
     let dob: Date
     let member: [Group]
+    var isDeleted: Bool = false
     let created: Date
     let upated: Date
     

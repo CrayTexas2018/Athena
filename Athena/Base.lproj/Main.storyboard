@@ -187,6 +187,76 @@
             </objects>
             <point key="canvasLocation" x="521" y="593"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="S1r-cp-Xvw">
+            <objects>
+                <viewController id="6Ii-8s-hez" customClass="MediaViewController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNr-Zt-Ugu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-ve-G7q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cOr-eh-FiP"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="m5z-Zz-tNJ"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKR-ZJ-XS6">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b9N-Kw-Qlu"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Choose Photo" id="OSD-IP-8j3">
+                                        <connections>
+                                            <action selector="choosePhotoButtonPressed:" destination="6Ii-8s-hez" id="vBJ-EJ-GqU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ejw-Ud-dSD"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qvm-OQ-28X"/>
+                                    <barButtonItem title="Take Photo" id="hHc-f6-nKt">
+                                        <connections>
+                                            <action selector="takePhotoButtonPressed:" destination="6Ii-8s-hez" id="kr8-w4-MGA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-QY-sCj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="Rvr-tm-T7q"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="375" id="fDY-mN-Uve"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eT3-ve-G7q" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="Bw4-uf-AYi"/>
+                            <constraint firstItem="eT3-ve-G7q" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="Xhj-ii-TYF"/>
+                            <constraint firstItem="hRh-QY-sCj" firstAttribute="top" secondItem="eT3-ve-G7q" secondAttribute="bottom" id="Y1r-6z-cKu"/>
+                            <constraint firstItem="QKR-ZJ-XS6" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="aPe-Zb-kKR"/>
+                            <constraint firstItem="hRh-QY-sCj" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="eFi-Wy-1Sb"/>
+                            <constraint firstItem="hRh-QY-sCj" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="h8T-9b-WbH"/>
+                            <constraint firstItem="QKR-ZJ-XS6" firstAttribute="bottom" secondItem="Zj1-Al-itv" secondAttribute="bottom" id="iVA-cX-NAF"/>
+                            <constraint firstItem="QKR-ZJ-XS6" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="mgc-0v-Ws2"/>
+                            <constraint firstItem="eT3-ve-G7q" firstAttribute="top" secondItem="Zj1-Al-itv" secondAttribute="top" id="v4i-Xs-19s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zj1-Al-itv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="54X-0G-USy"/>
+                    <connections>
+                        <outlet property="choosePhotoButton" destination="OSD-IP-8j3" id="uxr-fX-Wcd"/>
+                        <outlet property="imageView" destination="hRh-QY-sCj" id="Hlf-6L-loe"/>
+                        <outlet property="takePhotoButton" destination="hHc-f6-nKt" id="eyg-C4-1UG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2N-1A-4Ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269.5999999999999" y="259.52023988005999"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="orb-up-5yb">
             <objects>
@@ -216,6 +286,7 @@
                         <segue destination="qo3-5Z-c4q" kind="relationship" relationship="viewControllers" id="31g-Q7-NZc"/>
                         <segue destination="PbK-mA-MVd" kind="relationship" relationship="viewControllers" id="IAP-Wi-x9q"/>
                         <segue destination="ROh-Nn-Y8x" kind="relationship" relationship="viewControllers" id="awJ-4i-cZd"/>
+                        <segue destination="6Ii-8s-hez" kind="relationship" relationship="viewControllers" id="UyL-WV-Eal"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SJ-ui-Dbk" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,4 +9,5 @@ target 'Athena' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 end

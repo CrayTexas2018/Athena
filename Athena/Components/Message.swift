@@ -21,6 +21,7 @@ public struct Message
     let isSuccessful: Bool
     let isSent: Bool
     let isReceived: Bool
+    var isDeleted: Bool = false
     
     public static func messageId(message: Message) -> Int
     {

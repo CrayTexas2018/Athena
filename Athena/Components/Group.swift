@@ -11,6 +11,7 @@ import Foundation
 public struct Group {
     let groupId: String
     let name: String
+    var isDeleted: Bool = false
     let created: Date
     var updated: Date
     
