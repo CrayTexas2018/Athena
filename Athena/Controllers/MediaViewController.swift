@@ -13,6 +13,7 @@ class MediaViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var choosePhotoButton: UIBarButtonItem!
     @IBOutlet weak var takePhotoButton: UIBarButtonItem!
+    @IBOutlet weak var mediaView: UIView!
     
     let picker = UIImagePickerController()
     

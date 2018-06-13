@@ -25,8 +25,18 @@ public struct LoginUtility {
         return status
     }
     
-    public func loginCallback(user: User, error: Error)
-    {
-        
+    public static func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Error logging out")
+        }
+    }
+    
+    public static func isUserSignedIn() -> Bool {
+        if Auth.auth().currentUser == nil {
+            return false
+        }
+        return true
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kr9-k8-hfg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="LoginController" customModule="Athena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162" y="260"/>
+            <point key="canvasLocation" x="-1310" y="281"/>
         </scene>
         <!--Messages-->
         <scene sceneID="MZk-0Q-cTF">
@@ -196,9 +196,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT3-ve-G7q">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="cOr-eh-FiP"/>
+                                    <constraint firstAttribute="height" constant="70" id="A7O-Ok-iYZ"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Item" id="m5z-Zz-tNJ"/>
@@ -225,24 +225,23 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-QY-sCj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="Rvr-tm-T7q"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="375" id="fDY-mN-Uve"/>
+                                    <constraint firstAttribute="width" constant="375" id="c4P-M7-Xut"/>
+                                    <constraint firstAttribute="height" constant="375" id="tKU-CF-fWY"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eT3-ve-G7q" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="Bw4-uf-AYi"/>
-                            <constraint firstItem="eT3-ve-G7q" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="Xhj-ii-TYF"/>
-                            <constraint firstItem="hRh-QY-sCj" firstAttribute="top" secondItem="eT3-ve-G7q" secondAttribute="bottom" id="Y1r-6z-cKu"/>
+                            <constraint firstItem="hRh-QY-sCj" firstAttribute="centerY" secondItem="MNr-Zt-Ugu" secondAttribute="centerY" id="291-ES-cuw"/>
+                            <constraint firstItem="eT3-ve-G7q" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="FWZ-Ds-TP2"/>
+                            <constraint firstItem="eT3-ve-G7q" firstAttribute="top" secondItem="MNr-Zt-Ugu" secondAttribute="top" id="NFc-T5-IdE"/>
                             <constraint firstItem="QKR-ZJ-XS6" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="aPe-Zb-kKR"/>
-                            <constraint firstItem="hRh-QY-sCj" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="eFi-Wy-1Sb"/>
-                            <constraint firstItem="hRh-QY-sCj" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="h8T-9b-WbH"/>
                             <constraint firstItem="QKR-ZJ-XS6" firstAttribute="bottom" secondItem="Zj1-Al-itv" secondAttribute="bottom" id="iVA-cX-NAF"/>
                             <constraint firstItem="QKR-ZJ-XS6" firstAttribute="leading" secondItem="Zj1-Al-itv" secondAttribute="leading" id="mgc-0v-Ws2"/>
-                            <constraint firstItem="eT3-ve-G7q" firstAttribute="top" secondItem="Zj1-Al-itv" secondAttribute="top" id="v4i-Xs-19s"/>
+                            <constraint firstItem="hRh-QY-sCj" firstAttribute="centerX" secondItem="MNr-Zt-Ugu" secondAttribute="centerX" id="qpl-QU-HLG"/>
+                            <constraint firstItem="eT3-ve-G7q" firstAttribute="trailing" secondItem="Zj1-Al-itv" secondAttribute="trailing" id="wD5-CY-Hzm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zj1-Al-itv"/>
                     </view>
@@ -250,6 +249,7 @@
                     <connections>
                         <outlet property="choosePhotoButton" destination="OSD-IP-8j3" id="uxr-fX-Wcd"/>
                         <outlet property="imageView" destination="hRh-QY-sCj" id="Hlf-6L-loe"/>
+                        <outlet property="mediaView" destination="MNr-Zt-Ugu" id="pma-bi-SqM"/>
                         <outlet property="takePhotoButton" destination="hHc-f6-nKt" id="eyg-C4-1UG"/>
                     </connections>
                 </viewController>

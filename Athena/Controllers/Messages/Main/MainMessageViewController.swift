@@ -34,7 +34,6 @@ class MainMessageViewController: UITableViewController {
         cell.contactNameLabel.text = "Cray Jaeger"
         cell.lastMessageLabel.text = "Yesterday"
         cell.messageLabel.text = "This is the message label text"
-        cell.backgroundColor = Colors.athenaBlack
         
         return cell
     }

@@ -10,7 +10,6 @@ import UIKit
 
 class MainMessageCellTableViewCell: UITableViewCell {
     // Config View
-    let viewColor = Colors.athenaBlack
     var conversationId = 0
         
     @IBOutlet weak var contactImage: UIImageView!
@@ -22,7 +21,6 @@ class MainMessageCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = viewColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

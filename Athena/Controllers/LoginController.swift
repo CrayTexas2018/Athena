@@ -22,9 +22,12 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = Colors.athenaBlack
-        //createTestUser()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            self.navigateToMain()
+        }
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -41,16 +44,20 @@ class LoginController: UIViewController {
                 let alert = StandardAlert.alert(alertTitle: "Login Error", alertMessage: "Account not found", buttonTitle: "OK")
                 self.present(alert, animated: true, completion: nil)
             }
-            if user != nil {
-                if let tabViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabView") as? FeedViewController {
-                    self.present(tabViewController, animated: true, completion: nil)
-                }
+            if LoginUtility.isUserSignedIn() {
+                self.navigateToMain()
             }
         }
     }
     
     @IBAction func createAccountButtonPressed(_ sender: UIButton) {
         
+    }
+    
+    private func navigateToMain() {
+        if let tabViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabView") as? FeedViewController {
+            self.present(tabViewController, animated: true, completion: nil)
+        }
     }
     
 //    func createTestUser()
